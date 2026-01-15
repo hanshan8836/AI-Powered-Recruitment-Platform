@@ -1,34 +1,40 @@
 # AI-Powered-Recruitment-Platform
 
-基于 Claude Code Agent 的智能简历筛选系统
+**基于 Claude Code Agent 的智能简历筛选系统 | AI Resume Screening System**
+
+> 一套完整的、本地化运行的AI简历筛选解决方案，确保招聘过程公平、公正、透明、可追溯
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Claude](https://img.shields.io/badge/Powered%20by-Claude-orange.svg)](https://www.anthropic.com/)
+
+---
+
+## 作者
+
+**魏小冲** | 中国人民大学博士生
 
 ---
 
 ## 项目简介
 
-这是一套完整的、本地化运行的AI简历筛选解决方案，确保招聘过程**公平、公正、透明、可追溯**。
+这是一套基于 **Claude Code Agent** 本地化运行的AI智能简历筛选系统，专为企业HR和招聘团队设计。
+
+### 解决什么问题？
+
+- 传统简历筛选**主观性强**、**标准不统一**
+- AI筛选简历缺乏**透明度**和**可追溯性**
+- 候选人无法知道**为什么被淘汰**
+- 筛选过程缺乏**规范化流程**
 
 ### 核心特点
 
-- **标准先行**：筛选前必须完成备案，锁定后不可修改
-- **过程透明**：使用什么模型、什么提示词，全部记录在案
-- **结果公示**：筛选标准对外公开，个人结果可查询
-- **全程可追溯**：每个评分都有依据，支持审计和申诉
-- **宁缺勿滥**：全网核实只采用100%确定的信息
-
----
-
-## 快速开始
-
-```bash
-# 进入系统目录
-cd resume-screening-system
-
-# 查看详细说明
-cat README.md
-```
-
-**详细使用指南请参考**：[resume-screening-system/README.md](resume-screening-system/README.md)
+| 特点 | 说明 |
+|------|------|
+| **标准先行** | 筛选前必须完成备案，提示词、权重锁定后不可修改 |
+| **过程透明** | 使用什么模型、什么提示词，全部记录在案 |
+| **结果公示** | 筛选标准对外公开，个人结果可查询 |
+| **全程可追溯** | 每个评分都有依据，支持审计和申诉 |
+| **宁缺勿滥** | 全网核实只采用100%确定的信息，搜不到≠造假 |
 
 ---
 
@@ -41,6 +47,23 @@ cat README.md
   设计提示词         逐份评估            开放查询          审计日志
   审批签字           全网核实            处理申诉
 ```
+
+---
+
+## 快速开始
+
+```bash
+# 1. 克隆仓库
+git clone https://github.com/your-username/AI-Powered-Recruitment-Platform.git
+
+# 2. 进入系统目录
+cd AI-Powered-Recruitment-Platform/resume-screening-system
+
+# 3. 查看详细说明
+cat README.md
+```
+
+**详细使用指南**：[resume-screening-system/README.md](resume-screening-system/README.md)
 
 ---
 
@@ -100,12 +123,31 @@ AI-Powered-Recruitment-Platform/
 
 ---
 
+## 关键词 | Keywords
+
+`AI简历筛选` `智能招聘` `Claude` `人工智能招聘` `简历评估` `HR科技` `招聘自动化` `人才筛选`
+
+`AI Resume Screening` `Intelligent Recruitment` `Claude Code Agent` `HR Tech` `Automated Hiring` `Talent Acquisition` `Resume Evaluation` `Fair Recruitment`
+
+---
+
+## Star History
+
+如果这个项目对你有帮助，请给一个 Star 支持一下！
+
+---
+
 ## 许可证
 
-本项目仅供学习和内部使用。
+本项目采用 MIT 许可证，仅供学习和内部使用。
 
 ---
 
 ## 联系方式
 
-如有问题或建议，请提交 Issue。
+- **作者**：魏小冲（中国人民大学博士生）
+- **问题反馈**：请提交 Issue
+
+---
+
+*让AI招聘更公平、更透明、更可追溯*
