@@ -1,0 +1,160 @@
+{
+  "report_info": {
+    "report_id": "RPT-HR-HRS-20260115-001-001",
+    "basis_document": "BP-HR-HRS-20260115-001",
+    "evaluation_time": "2026-01-15T14:30:00",
+    "evaluator": "Claude Code Agent"
+  },
+  "candidate_info": {
+    "name": "王芳",
+    "phone": "139****8888",
+    "email": "wangfang@email.com",
+    "position_applied": "人力资源专员（招聘方向）"
+  },
+  "threshold_check": {
+    "passed": true,
+    "details": {
+      "education": {
+        "requirement": "本科及以上",
+        "actual": "本科（华东师范大学，211院校）",
+        "result": "通过"
+      },
+      "work_years": {
+        "requirement": "2年及以上HR相关经验",
+        "actual": "约6.5年（2019.07至今）",
+        "result": "通过"
+      },
+      "recruitment_experience": {
+        "requirement": "有招聘模块实操经验",
+        "actual": "有，招聘专员/助理岗位",
+        "result": "通过"
+      }
+    },
+    "elimination_reason": null
+  },
+  "scoring_details": {
+    "education_background": {
+      "weight": "10%",
+      "score": 4,
+      "basis": "简历原文：'2015.09 - 2019.06 | 华东师范大学 | 人力资源管理 | 本科'，华东师范大学为211院校，人力资源管理为对口专业，评4分"
+    },
+    "work_experience": {
+      "weight": "25%",
+      "score": 5,
+      "basis": "简历原文：'腾讯计算机系统有限公司 招聘专员'、'字节跳动科技有限公司 HR实习生→招聘助理'，双大厂背景，6.5年经验，有晋升记录，评5分"
+    },
+    "recruitment_skills": {
+      "weight": "25%",
+      "score": 5,
+      "basis": "简历原文：'年度招聘完成150+人'、'搭建校园招聘流程，对接15所高校'、'参与北森人才测评系统的引入'，精通全流程，有测评经验，有量化成果，评5分"
+    },
+    "ai_application": {
+      "weight": "25%",
+      "score": 5,
+      "basis": "简历原文：'使用ChatGPT和Claude辅助JD优化和简历初筛，效率提升约40%'、'推动AI工具在招聘流程中的应用，被评为部门创新案例'，深度使用AI工具，有明确案例和量化成果，评5分"
+    },
+    "overall_quality": {
+      "weight": "15%",
+      "score": 5,
+      "basis": "简历结构清晰，信息完整，职业路径稳定向上（实习生→助理→专员），无频繁跳槽，评5分"
+    }
+  },
+  "weighted_score": 4.90,
+  "calculation": "4×10% + 5×25% + 5×25% + 5×25% + 5×15% = 0.4 + 1.25 + 1.25 + 1.25 + 0.75 = 4.90",
+  "tier": "S档",
+  "highlights": [
+    {
+      "item": "AI应用能力突出",
+      "source": "简历原文：'使用ChatGPT和Claude辅助JD优化和简历初筛，效率提升约40%'",
+      "analysis": "有明确的AI工具使用经验，且有量化成果，被评为部门创新案例"
+    },
+    {
+      "item": "双大厂背景",
+      "source": "腾讯、字节跳动工作经历",
+      "analysis": "知名互联网公司HR经验，熟悉大厂招聘流程"
+    },
+    {
+      "item": "有量化成果",
+      "source": "简历原文：'年度招聘完成150+人'、'对接15所高校'",
+      "analysis": "工作成果有具体数据支撑，可信度高"
+    },
+    {
+      "item": "测评经验",
+      "source": "简历原文：'参与北森人才测评系统的引入'、'熟悉MBTI、DISC'",
+      "analysis": "有人才测评经验，符合加分项"
+    },
+    {
+      "item": "职业发展稳定",
+      "source": "工作经历显示从实习生成长为招聘专员",
+      "analysis": "职业路径清晰，无频繁跳槽"
+    }
+  ],
+  "concerns": [
+    {
+      "item": "证书级别",
+      "content": "持有人力资源管理师三级，非高级证书",
+      "suggestion": "可在面试时了解是否有进一步考证计划"
+    }
+  ],
+  "verification_results": {
+    "education": {
+      "status": "✓ 已核实",
+      "method": "学校官网搜索",
+      "result": "华东师范大学人力资源管理专业确认存在，为211院校A类学科",
+      "source": "华东师范大学官网"
+    },
+    "company_tencent": {
+      "status": "✓ 已核实",
+      "method": "企业信息查询",
+      "result": "深圳市腾讯计算机系统有限公司确认存在，成立于1998年",
+      "source": "企查查/天眼查"
+    },
+    "company_bytedance": {
+      "status": "✓ 已核实",
+      "method": "企业信息查询",
+      "result": "字节跳动在深圳有业务运营，2017年设立深圳办公室",
+      "source": "公开新闻报道"
+    },
+    "candidate_employment": {
+      "status": "— 无法核实",
+      "method": "无公开渠道",
+      "result": "个人任职信息无法通过公开渠道核实",
+      "note": "这是正常情况，建议背调确认"
+    },
+    "certificate": {
+      "status": "⚠️ 待验证",
+      "method": "官方系统查询",
+      "result": "人力资源管理师三级证书需要提供证书编号才能验证",
+      "note": "建议面试前要求候选人提供证书扫描件"
+    }
+  },
+  "verification_summary": {
+    "verified": 3,
+    "unable_to_verify": 1,
+    "pending_verification": 1
+  },
+  "interview_suggestions": {
+    "focus_areas": [
+      "AI辅助招聘的具体实践：用AI做了哪些工作？效率提升40%是如何计算的？",
+      "150+人招聘的具体数据：是技术岗位还是全岗位？社招还是校招？",
+      "北森测评系统引入的角色：是主导还是参与？具体负责什么？"
+    ],
+    "items_to_confirm": [
+      "人力资源管理师三级证书（请提供证书扫描件和编号）",
+      "如进入终面，建议对两段工作经历进行背景调查"
+    ]
+  },
+  "conclusion": {
+    "tier": "S档",
+    "score": 4.90,
+    "recommendation": "优秀候选人，建议优先安排面试",
+    "reason": "AI应用能力突出、双大厂背景、有量化成果、职业路径稳定"
+  },
+  "audit_info": {
+    "basis_document": "BP-HR-HRS-20260115-001",
+    "prompt_version": "v1.0",
+    "model_used": "Claude",
+    "evaluation_time": "2026-01-15T14:30:00",
+    "report_generated": "2026-01-15T14:35:00"
+  }
+}
