@@ -118,8 +118,28 @@ AI-Powered-Recruitment-Platform/
 
 ## 前置要求
 
-- [Claude Code CLI](https://docs.anthropic.com/claude-code)
-- 有效的 Claude API 访问权限
+本系统基于 **Claude Code** 运行，目前支持两种使用方式：
+
+### 方式一：Claude Code App（推荐）
+
+直接在 Claude 桌面/网页应用中使用，无需安装任何软件：
+
+1. 访问 [Claude](https://claude.ai) 并登录
+2. 在对话中点击"添加文件夹"或使用文件选择器
+3. 指定本项目所在的本地文件夹，授予访问权限
+4. 即可开始使用
+
+**优点**：开箱即用，无需配置环境，适合非技术用户
+
+### 方式二：Claude Code CLI（本地命令行）
+
+适合开发者和需要自动化的场景：
+
+1. 安装 [Claude Code CLI](https://docs.anthropic.com/claude-code)
+2. 配置有效的 Claude API 访问权限
+3. 在终端中运行 `claude` 命令启动
+
+**优点**：可脚本化、自动化，适合批量处理
 
 ---
 

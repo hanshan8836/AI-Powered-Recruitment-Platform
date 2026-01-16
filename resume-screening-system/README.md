@@ -94,11 +94,41 @@
 
 ### 前置要求
 
+本系统基于 **Claude Code** 运行，支持两种使用方式：
+
+#### 方式一：Claude Code App（推荐）
+
+直接在 Claude 桌面/网页应用中使用：
+
+1. 访问 [Claude](https://claude.ai) 并登录
+2. 在对话中添加本项目文件夹，授予访问权限
+3. 即可开始对话式筛选
+
+**优点**：开箱即用，无需安装配置，图形化界面友好
+
+#### 方式二：Claude Code CLI（命令行）
+
+适合开发者和需要自动化的场景：
+
 1. 已安装 [Claude Code CLI](https://docs.anthropic.com/claude-code)
 2. 有效的 Claude API 访问权限
 3. 本地运行环境（macOS / Linux / Windows WSL）
 
+**优点**：可脚本化、自动化，适合批量处理
+
+---
+
 ### 5分钟快速体验
+
+#### 使用 Claude Code App
+
+1. **准备简历**：将待筛选的简历文件放入 `workspace/01_待筛选简历/` 文件夹
+2. **打开 Claude**：访问 [claude.ai](https://claude.ai)
+3. **添加文件夹**：点击对话框中的"添加文件夹"按钮，选择本项目的 `resume-screening-system` 文件夹
+4. **发送指令**：告诉 Claude 你要筛选简历，例如：
+   > "请根据 templates/提示词库/技术部门/Java工程师_提示词.md 的标准，筛选 workspace/01_待筛选简历/ 中的简历"
+
+#### 使用 Claude Code CLI
 
 ```bash
 # 1. 进入系统目录
