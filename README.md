@@ -30,11 +30,46 @@
 
 | 特点 | 说明 |
 |------|------|
-| **标准先行** | 筛选前必须完成备案，提示词、权重锁定后不可修改 |
-| **过程透明** | 使用什么模型、什么提示词，全部记录在案 |
+| **标准先行** | 筛选前必须完成备案，Skills、权重锁定后不可修改 |
+| **过程透明** | 使用什么模型、什么 Skills，全部记录在案 |
 | **结果公示** | 筛选标准对外公开，个人结果可查询 |
 | **全程可追溯** | 每个评分都有依据，支持审计和申诉 |
-| **宁缺勿滥** | 全网核实只采用100%确定的信息，搜不到≠造假 |
+| **宁缺勿滥** | 全网核实只采用100%确定的信息，搜不到不等于造假 |
+
+---
+
+## Skills 框架：系统的核心
+
+> **重要**：Skills 的设计是整个系统成功的关键。每个企业都应该根据自身特点定制 Skills，而不是直接使用通用模板。
+
+### Skills 和 Prompts 的区别
+
+| 概念 | 本质 | 类比 |
+|------|------|------|
+| **Skills** | 封装好的能力模块 | 员工的专业技能证书 |
+| **Prompts** | 单次执行的指令 | "请帮我做XX"这句话 |
+
+**Prompts 是"指令"，Skills 是"能力"**。一个好的 Skills 定义包含：
+- 筛选标准（评什么）
+- 评分规则（怎么打分）
+- 评估流程（怎么做）
+- 输出规范（输出什么格式）
+
+### 为什么 Skills 设计如此重要？
+
+1. **同一岗位，不同公司需求完全不同**
+   - 互联网大厂的 Java 工程师需要高并发、分布式经验
+   - 金融公司的 Java 工程师需要安全合规、事务处理能力
+   - AI 创业公司需要 AI 工具使用、快速学习能力
+
+2. **Skills 决定筛选质量的上限**
+   - 再好的 AI 模型，Skills 设计不当也无法产出好结果
+   - 权重分配体现公司价值观
+   - 评分标准决定结果一致性
+
+3. **必须根据公司特点定制**
+   - 照搬通用模板会导致筛选效果大打折扣
+   - 请阅读 [Skills 设计指南](resume-screening-system/docs/Skills设计指南.md)
 
 ---
 
@@ -44,7 +79,7 @@
 第一阶段【备案】 → 第二阶段【执行】 → 第三阶段【公示】 → 第四阶段【归档】
       ↓                  ↓                  ↓                  ↓
   制定标准           启动Claude          公示标准          永久存档
-  设计提示词         逐份评估            开放查询          审计日志
+  设计Skills          逐份评估            开放查询          审计日志
   审批签字           全网核实            处理申诉
 ```
 
@@ -63,6 +98,10 @@ cd AI-Powered-Recruitment-Platform/resume-screening-system
 cat README.md
 ```
 
+**重要**：在开始使用前，请务必阅读：
+1. [Skills 框架说明](resume-screening-system/docs/Skills框架说明.md) - 理解核心概念
+2. [Skills 设计指南](resume-screening-system/docs/Skills设计指南.md) - 如何定制 Skills
+
 **详细使用指南**：[resume-screening-system/README.md](resume-screening-system/README.md)
 
 ---
@@ -78,7 +117,7 @@ AI-Powered-Recruitment-Platform/
     ├── README.md                      # 详细使用指南
     ├── templates/                     # 模板文件
     │   ├── 备案文件/                  # 备案表模板
-    │   ├── 提示词库/                  # 各岗位提示词
+    │   ├── Skills库/                  # 各岗位 Skills 定义
     │   └── 输出模板/                  # 输出文件模板
     ├── examples/                      # 示例文件
     ├── docs/                          # 详细文档
@@ -87,22 +126,32 @@ AI-Powered-Recruitment-Platform/
 
 ---
 
-## 适用岗位
+## Skills 库
 
-系统已提供以下岗位的提示词模板：
+系统提供以下岗位的 Skills 模板作为参考（请根据公司特点定制）：
 
-| 部门 | 岗位 |
-|------|------|
-| HR部门 | HR专员、HRBP |
-| 技术部门 | Java工程师、前端工程师、产品经理 |
-| 财务部门 | 财务专员 |
-| 市场部门 | 市场专员 |
+| 部门 | 岗位 | Skills 文件 |
+|------|------|------------|
+| HR部门 | HR专员、HRBP | `Skills库/HR部门/` |
+| 技术部门 | Java工程师、前端工程师、产品经理 | `Skills库/技术部门/` |
+| 财务部门 | 财务专员 | `Skills库/财务部门/` |
+| 市场部门 | 市场专员 | `Skills库/市场部门/` |
+| 通用 | 基础模板 | `Skills库/通用/` |
 
-> 其他岗位可基于通用模板进行定制
+> **警告**：这些 Skills 是示例模板，每个公司应该根据自身的公司特点、行业属性和岗位需求进行定制。
 
 ---
 
 ## 文档索引
+
+### 核心概念文档
+
+| 文档 | 说明 |
+|------|------|
+| [Skills 框架说明](resume-screening-system/docs/Skills框架说明.md) | 理解 Skills 与 Prompts 的区别 |
+| [Skills 设计指南](resume-screening-system/docs/Skills设计指南.md) | 如何根据公司特点设计 Skills |
+
+### 流程文档
 
 | 文档 | 说明 |
 |------|------|
@@ -125,9 +174,9 @@ AI-Powered-Recruitment-Platform/
 
 ## 关键词 | Keywords
 
-`AI简历筛选` `智能招聘` `Claude` `人工智能招聘` `简历评估` `HR科技` `招聘自动化` `人才筛选`
+`AI简历筛选` `智能招聘` `Claude` `人工智能招聘` `简历评估` `HR科技` `招聘自动化` `人才筛选` `Skills框架`
 
-`AI Resume Screening` `Intelligent Recruitment` `Claude Code Agent` `HR Tech` `Automated Hiring` `Talent Acquisition` `Resume Evaluation` `Fair Recruitment`
+`AI Resume Screening` `Intelligent Recruitment` `Claude Code Agent` `HR Tech` `Automated Hiring` `Talent Acquisition` `Resume Evaluation` `Fair Recruitment` `Skills Framework`
 
 ---
 
@@ -150,4 +199,4 @@ AI-Powered-Recruitment-Platform/
 
 ---
 
-*让AI招聘更公平、更透明、更可追溯*
+*让AI招聘更公平、更透明、更可追溯 - Skills 设计是关键*
